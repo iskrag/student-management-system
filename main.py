@@ -170,6 +170,7 @@ class InsertDialog(QDialog):
         cursor.close()
         connection.close()
         main_window.load_data()  # to refresh the table content
+        self.close()
 
 
 class SearchDialog(QDialog):
@@ -208,6 +209,7 @@ class SearchDialog(QDialog):
 
         cursor.close()
         connection.close()
+        self.close()
 
 
 class EditDialog(QDialog):
@@ -266,6 +268,7 @@ class EditDialog(QDialog):
         connection.close()
         # Refresh the table
         main_window.load_data()
+        self.close()
 
 
 class DeleteDialog(QDialog):
